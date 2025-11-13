@@ -37,7 +37,11 @@ CUDA implementations converge to these values.
 /project-root
 │
 ├── CMakeLists.txt
+├── include/
+│   └── *.h
+│   └── *.cuh
 ├── src/
+│   └── *.cpp
 │   └── *.cu
 └── README.md
 ```
@@ -107,24 +111,11 @@ Krrb     [0.00, 1.00]
 
 ---
 
-## ⚙️ Implementation Details
-
-| Component                   | Description                                           |
-| --------------------------- | ----------------------------------------------------- |
-| `cfr()` / `cfr_recursive()` | Main CFR recursion                                    |
-| `History`                   | Encodes betting sequence                              |
-| `InfoSet` / `InfoSetMap`    | Stores strategy, regret, reach probability            |
-| `terminal_utils()`          | Computes payoff                                       |
-| `next_strategy()`           | Regret-matching update                                |
-| CUDA version                | Parallelizes CFR across card combinations and actions |
-
----
-
 ## 🚀 CUDA Version Highlights
 
 * Runs CFR iterations in parallel
 * Uses shared memory & atomic operations
-* Measurable speedup vs CPU version
+* Measurable speedup
 * Designed for extending to larger poker games
 
 ---

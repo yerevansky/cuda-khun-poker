@@ -1,0 +1,13 @@
+#ifndef CUDA_KHUN_POKER_CONSTANTS_H
+#define CUDA_KHUN_POKER_CONSTANTS_H
+
+#define N_ACTIONS 2
+#define ACT_PROB 1.0 / N_ACTIONS
+
+#define N_CARDS 3
+#define N_POSS N_CARDS * (N_CARDS - 1)
+#define POSS_PROB 1.0 / N_POSS
+
+#define N_INFOSETS 12
+
+#endif //CUDA_KHUN_POKER_CONSTANTS_H
