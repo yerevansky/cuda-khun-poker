@@ -478,3 +478,6 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# CLion IDE files
+.idea/
